@@ -30,13 +30,19 @@ namespace ShootingDice
 
             player1.Play(large);
 
+            Console.WriteLine("-------------------");
+
             OneHigherPlayer higher = new OneHigherPlayer();
             higher.Name = "HIGHER";
             higher.Play(large);
 
+            Console.WriteLine("-------------------");
+
             Player player4 = new OneHigherPlayer();
             player4.Name = "PLAYA 4";
             player4.Play(higher);
+
+            Console.WriteLine("-------------------");
             
             SmackTalkingPlayer smacker = new SmackTalkingPlayer();
             smacker.Taunt = "You smell like some cheese!";
@@ -45,8 +51,20 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            HumanPlayer human = new HumanPlayer();
+            human.Name = "Human";
+            human.Roll();
+
+            Console.WriteLine("-------------------");
+
+            CreativeSmackTalkingPlayer creativeSmacker = new CreativeSmackTalkingPlayer();
+            creativeSmacker.Name = "Creative Smacker";
+            creativeSmacker.Roll();
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smacker
+                player1, player2, player3, large, smacker, human, creativeSmacker
             };
 
             PlayMany(players);
