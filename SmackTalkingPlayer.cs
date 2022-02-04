@@ -9,11 +9,12 @@ namespace ShootingDice
     {
         public string Taunt { get; set;}
 
-        public override void Play(Player other)
+        public override int Roll()
         {
             Console.WriteLine($"{Name} says {Taunt}");
-            base.Play(other);
+            return base.Roll();
         }
+        
 
     
     }

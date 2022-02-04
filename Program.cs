@@ -29,6 +29,14 @@ namespace ShootingDice
             large.Name = "Bigun Rollsalot";
 
             player1.Play(large);
+
+            OneHigherPlayer higher = new OneHigherPlayer();
+            higher.Name = "HIGHER";
+            higher.Play(large);
+
+            Player player4 = new OneHigherPlayer();
+            player4.Name = "PLAYA 4";
+            player4.Play(higher);
             
             SmackTalkingPlayer smacker = new SmackTalkingPlayer();
             smacker.Taunt = "You smell like some cheese!";
