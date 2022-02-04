@@ -61,10 +61,19 @@ namespace ShootingDice
             creativeSmacker.Name = "Creative Smacker";
             creativeSmacker.Roll();
 
+            Console.WriteLine("---------UPPER HALF Player----------");
+
+            Player upperHalf = new UpperHalfPlayer();
+            upperHalf.Name = "Upper Halfer";
+            upperHalf.Roll();
+            large.Play(upperHalf);
+            upperHalf.Play(creativeSmacker);
+           
+    
             Console.WriteLine("-------------------");
 
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smacker, human, creativeSmacker
+                player1, player2, player3, large, smacker, human, creativeSmacker, upperHalf
             };
 
             PlayMany(players);
